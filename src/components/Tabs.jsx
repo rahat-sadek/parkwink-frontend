@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-<BrowserRouter>
-<Routes>
-<Route path="/user" element={<UserPage />} />
-<Route path="/admin" element={<AdminPage />} />
-</Routes>
-</BrowserRouter>
+import UserPage from '../pages/UserPage';
+import AdminPage from '../pages/AdminPage';
+import { Link } from 'react-router-dom';
+
+
+<Link to={'/user'}>
+    Ciao
+</Link>

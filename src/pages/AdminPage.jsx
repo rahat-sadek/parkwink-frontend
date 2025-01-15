@@ -5,3 +5,4 @@ const AdminPage = () => {
         alert("ciao000")
     },[])
 }
+export default AdminPage;
