@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import UserPage from './pages/UserPage';
 import AdminPage from './pages/AdminPage';
 import Layout from './components/Layout'
-import Dashboard from './pages/Dashboard'
+import HomePage from './pages/HomePage'
 import RegisterForm from './pages/RegisterForm';
 import LoginForm from './pages/LoginForm';
 
@@ -13,7 +13,6 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path="/login" element={
-          
             <LoginForm />
         } />
       <Route path="/register" element={
@@ -21,7 +20,7 @@ function App() {
         } />
         <Route path="/" element={
           <Layout>
-            <Dashboard />
+            <HomePage />
           </Layout>
         } />
         <Route path="/user" element={

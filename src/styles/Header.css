@@ -1,47 +1,51 @@
-/* Styling del header */
 header {
-    display: flex;
-    justify-content: center;  /* Centra il contenuto orizzontalmente */
-    align-items: center;  /* Allinea il contenuto verticalmente */
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    position: relative;  /* Necessario per posizionare i link a destra */
-  }
-  
-  #title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-    text-align: center; /* Assicura che il testo sia centrato */
-    flex-grow: 1; /* Permette al titolo di espandersi e occupare lo spazio disponibile */
-  }
-  
-  /* Posizionamento dei link in alto a destra */
-  nav {
-    position: absolute;  /* Posizione assoluta per spostare i link in alto a destra */
-    top: 10px;
-    right: 20px;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #4CAF50;  /* Cambia colore al passaggio del mouse */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  position: relative;  
+}
+
+#title {
+  font-size: 2rem;
+  color: white ;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+#title:hover {
+  color:  #e67e22 ;
+}
+
+nav {
+  position: absolute;  
+  top: 10px;
+  right: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;  
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e67e22;  
+}
