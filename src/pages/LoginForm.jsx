@@ -1,30 +1,25 @@
 import React, { useState } from 'react';
-import '../styles/LoginForm.css';  // Aggiungi il file CSS per lo stile
+import '../styles/LoginForm.css';
 
 const LoginForm = () => {
-  // Stato per memorizzare i dati del form
   const [formData, setFormData] = useState({
     username: '',
     password: ''
   });
 
-  // Stato per gestire l'errore di invio del form
   const [error, setError] = useState('');
 
-  // Funzione per gestire il cambiamento dei campi
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value // Aggiorna il campo specificato
+      [name]: value
     });
   };
 
-  // Funzione per gestire l'invio del form
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validazione dei dati del form
     if (formData.username === '' || formData.password === '') {
       setError('Entrambi i campi sono obbligatori.');
       return;
@@ -32,7 +27,6 @@ const LoginForm = () => {
 
     setError('');
     console.log('Dati inviati:', formData);
-    // Qui puoi aggiungere la logica per inviare i dati a un server
   };
 
   return (

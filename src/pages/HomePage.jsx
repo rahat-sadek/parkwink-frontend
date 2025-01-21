@@ -1,20 +1,3 @@
-// import React, {useState, useEffect} from "react";
-// import '../styles/Dashboard.css';
-
-// const Dashboard = () => {
-//     const [data, setData] = useState([]);
-
-//     useEffect(() => {
-//     }, []);
-//     return (
-//         <>
-
-            
-//         </>
-//     )
-
-// };
-// export default Dashboard;
 import React, { useState, useEffect } from "react";
 import '../styles/HomePage.css';
 
