@@ -1,20 +1,16 @@
-/* Styling per la pagina di login */
 .login-form {
-  display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffffff; /* Cambiato in bianco per un aspetto più pulito */
-  border-radius: 10px; /* Raggio maggiore per abbinarsi con la homepage */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #3498db; /* Colore coerente con la homepage */
+  color: #3498db; 
 }
 
 .form-group {
@@ -25,7 +21,7 @@ h2 {
 label {
   font-size: 1rem;
   margin-bottom: 5px;
-  color: #333; /* Colore scuro per migliorare la leggibilità */
+  color: #333; 
 }
 
 input {
@@ -34,20 +30,19 @@ input {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f8f9fa; /* Colore più chiaro per gli input */
+  background-color: #f8f9fa; 
   transition: border-color 0.3s ease-in-out;
 }
 
 input:focus {
   outline: none;
-  border-color: #3498db; /* Colore del bordo coerente con la homepage */
+  border-color: #3498db; 
 }
 
 button {
   width: 100%;
   padding: 12px;
-  background-color: #3498db; /* Colore principale della homepage */
-  color: white;
+  background-color: #3498db; 
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
@@ -56,84 +51,12 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9; /* Colore hover coerente con il tema */
+  background-color: #2980b9; 
 }
 
 .error-message {
-  color: #e74c3c; /* Colore rosso chiaro per i messaggi di errore */
+  color: #e74c3c; 
   font-size: 0.9rem;
   margin-bottom: 10px;
   text-align: center;
-}
-
-/* Styling globale per il resto della homepage */
-.homepage-container {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-
-.homepage-header {
-  text-align: center;
-  background-color: #3498db; /* Colore principale della homepage */
-  color: white;
-  padding: 40px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.homepage-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.homepage-header p {
-  font-size: 18px;
-}
-
-.parking-stats {
-  display: flex;
-  justify-content: space-around;
-  margin: 40px 0;
-}
-
-.stats-card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 30%;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.stats-card h3 {
-  font-size: 28px;
-  color: #3498db;
-  margin-bottom: 10px;
-}
-
-.stats-card p {
-  font-size: 16px;
-  color: #7f8c8d;
-}
-
-.cta-section {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.cta-section button {
-  background-color: #e67e22; /* Colore arancione coerente */
-  color: white;
-  padding: 12px 25px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.cta-section button:hover {
-  background-color: #d35400; /* Colore hover coerente */
 }

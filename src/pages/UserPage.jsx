@@ -5,19 +5,19 @@ import "../styles/UserPage.css";
 const UserPage = () => {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);  
-  const [error, setError] = useState(null);      // Stato per gli errori
+  const [error, setError] = useState(null);   
 
   useEffect(() => {
-    // Funzione per fare la chiamata API
+      // Function to make the API call
     const fetchUserData = async () => {
       try {
         const response = await axios.get("mock/mockData.json");
         setUserData(response.data);
       } catch (err) {
-        setError("Errore nel caricamento dei dati.");
-        console.error("Errore:", err);
+        setError("Error loading data.");
+        console.error("Error:", err);
       } finally {
-        setLoading(false);  // Imposta il loading su false una volta che la chiamata è completata
+        setLoading(false);  
       }
     };
 
@@ -39,8 +39,9 @@ const UserPage = () => {
 
   return (
     <div className="infoUtente">
-      <p>Nome: {userData.name}</p>
-      <p>Età: {userData.age}</p>
+      <p>Name: {userData.name}</p>
+      <p>Surname: {userData.surname}</p>
+      <p>Age: {userData.age}</p>
     </div>
   );
 };

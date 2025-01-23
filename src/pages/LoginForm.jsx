@@ -21,12 +21,12 @@ const LoginForm = () => {
     e.preventDefault();
 
     if (formData.username === '' || formData.password === '') {
-      setError('Entrambi i campi sono obbligatori.');
+      setError('Both fields are required');
       return;
     }
 
     setError('');
-    console.log('Dati inviati:', formData);
+    console.log('Data sent:', formData);
   };
 
   return (
@@ -34,7 +34,7 @@ const LoginForm = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="username">Nome Utente</label>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             id="username"
@@ -42,7 +42,7 @@ const LoginForm = () => {
             value={formData.username}
             onChange={handleInputChange}
             required
-            placeholder="Inserisci il nome utente"
+            placeholder="Insert your username"
           />
         </div>
 
@@ -55,14 +55,14 @@ const LoginForm = () => {
             value={formData.password}
             onChange={handleInputChange}
             required
-            placeholder="Inserisci la password"
+            placeholder="Insert your password"
           />
         </div>
 
         {error && <p className="error-message">{error}</p>}
 
         <div className="form-group">
-          <button type="submit">Accedi</button>
+          <button type="submit">Login</button>
         </div>
       </form>
     </div>
