@@ -37,6 +37,16 @@
   }
 }
 
+.layout-container {
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+}
+
+.body-container {
+ flex-grow: 1;
+}
+
 * {
   text-decoration: none;
   margin: 0;

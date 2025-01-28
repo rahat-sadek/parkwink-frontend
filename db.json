@@ -1,0 +1,87 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "plate": "AB123CD"
+    },
+    {
+      "id": "2",
+      "brand": "Ford",
+      "model": "Focus",
+      "plate": "EF456GH"
+    },
+    {
+      "id": "3",
+      "brand": "Tesla",
+      "model": "Model 3",
+      "plate": "IJ789KL"
+    },
+    {
+      "id": "4c18",
+      "brand": "ford",
+      "model": "focusa c-max",
+      "plate": "kdjh55ewd"
+    },
+    {
+      "id": "f858",
+      "brand": "rfererf",
+      "model": "rfefrre",
+      "plate": "frefefre"
+    },
+    {
+      "id": "d8db",
+      "brand": "kjsdhifdsbjbf",
+      "model": "sdfdsfdsfewf",
+      "plate": "fsfewfwf"
+    },
+    {
+      "id": "b201",
+      "brand": "sfdsdfds",
+      "model": "sfdfdsfds",
+      "plate": "fsdfsd"
+    }
+  ],
+  "places": [
+    {
+      "id": "1",
+      "occupato": false
+    },
+    {
+      "id": "2",
+      "occupato": true
+    },
+    {
+      "id": "3",
+      "occupato": false
+    },
+    {
+      "id": "4",
+      "occupato": true
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "email": "mario.rossi@example.com",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "nome": "Luigi",
+      "cognome": "Verdi",
+      "email": "luigi.verdi@example.com",
+      "password": "mypassword"
+    },
+    {
+      "id": "3",
+      "nome": "Anna",
+      "cognome": "Bianchi",
+      "email": "anna.bianchi@example.com",
+      "password": "securepass"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+.list-container {
+    background-color: #f4f4f9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.title-list {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.info-list p {
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+}
+
+.car-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+}
+

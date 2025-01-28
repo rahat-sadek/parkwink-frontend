@@ -39,7 +39,7 @@ const RegisterForm = () => {
       <h2>Registrazione</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username*</label>
           <input
             type="text"
             id="username"
@@ -52,7 +52,7 @@ const RegisterForm = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password*</label>
           <input
             type="password"
             id="password"
@@ -65,7 +65,7 @@ const RegisterForm = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="confirmPassword">Conferma Password</label>
+          <label htmlFor="confirmPassword">Confirm Password*</label>
           <input
             type="password"
             id="confirmPassword"

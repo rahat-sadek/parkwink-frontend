@@ -1,38 +1,21 @@
-.infoUtente {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(19, 78, 227, 0.76);
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
+   .car-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
   }
   
-  .infoUtente p {
-    font-size: 1.2rem;
+  .form-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
     color: #333;
-    margin-bottom: 10px;
   }
   
-  .loading {
-    font-size: 1.5rem;
-    color: #4caf50;
-    text-align: center;
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
-  
-  .error {
-    font-size: 1.2rem;
-    color: red;
-    text-align: center;
-  }
-  
-  .spinner {
-    border: 4px solid #f3f3f3; 
-    border-top: 4px solid #3498db; 
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-    margin: 20px auto;
-  }
-  

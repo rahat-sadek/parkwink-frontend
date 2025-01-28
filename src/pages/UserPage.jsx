@@ -1,47 +1,99 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "../styles/UserPage.css";
 
 const UserPage = () => {
-  const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);  
-  const [error, setError] = useState(null);   
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    brand: "",
+    model: "",
+    plate: ""
+  });
 
-  useEffect(() => {
-      // Function to make the API call
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get("mock/mockData.json");
-        setUserData(response.data);
-      } catch (err) {
-        setError("Error loading data.");
-        console.error("Error:", err);
-      } finally {
-        setLoading(false);  
-      }
+  const handleClick = () => {
+    navigate('/admin');
     };
 
-    fetchUserData();
-  }, []);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
 
-  if (loading) {
-    return (
-      <div className="loading">
-        <div className="spinner"></div>
-        <p>Caricamento...</p>
-      </div>
-    );
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
 
-  if (error) {
-    return <p className="error">{error}</p>;
-  }
+      const response = await fetch("http://localhost:3001/cars", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert("Car added successfully!");
+        setFormData({
+          brand: "",
+          model: "",
+          plate: ""
+        });
+        
+      } else {
+        alert("Failed to add car. Please try again.");
+      }
+  };
 
   return (
-    <div className="infoUtente">
-      <p>Name: {userData.name}</p>
-      <p>Surname: {userData.surname}</p>
-      <p>Age: {userData.age}</p>
+    <div>
+      <form className="car-form" onSubmit={handleSubmit}>
+        <h2>Car form</h2>
+
+        <label htmlFor="brand" className="form-label">
+          Brand*
+        </label>
+        <input
+          id="brand"
+          name="brand"
+          value={formData.brand}
+          onChange={handleInputChange}
+          placeholder="Insert your car brand"
+          required
+          className="form-input"
+        />
+
+        <label htmlFor="model" className="form-label">
+          Car model*
+        </label>
+        <input
+          id="model"
+          name="model"
+          value={formData.model}
+          onChange={handleInputChange}
+          placeholder="Insert your car model"
+          required
+          className="form-input"
+        />
+
+        <label htmlFor="plate" className="form-label">
+          Plate*
+        </label>
+        <input
+          id="plate"
+          name="plate"
+          value={formData.plate}
+          onChange={handleInputChange}
+          placeholder="Insert your car plate"
+          required
+          className="form-input"
+        />
+
+        <button type="submit" className="form-submit" onClick={handleClick}>
+          Add car
+        </button>
+      </form>
     </div>
   );
 };
