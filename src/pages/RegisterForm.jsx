@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/RegisterForm.css';
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     username: '',
+    email: '',
     password: '',
     confirmPassword: ''
   });
-
-  const [error, setError] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value 
+      [name]: value
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (formData.username === '' || formData.email === '' || formData.password === '' || formData.confirmPassword === '') {
       setError('All fields are mandatory.');
       return;
@@ -31,7 +34,27 @@ const RegisterForm = () => {
     }
 
     setError('');
-    console.log('Data sent:', formData);
+
+    const response = await fetch("http://localhost:3001/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert("The user has been saved successfully");
+      navigate('/login'); 
+      setFormData({
+        username: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      });
+    } else {
+      alert("Failed to add user. Please try again.");
+    }
   };
 
   return (
@@ -48,6 +71,19 @@ const RegisterForm = () => {
             onChange={handleInputChange}
             required
             placeholder="Enter your username"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            placeholder="Insert your email"
           />
         </div>
 

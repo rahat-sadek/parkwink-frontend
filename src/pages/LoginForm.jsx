@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/LoginForm.css';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     username: '',
     password: ''
   });
-
-  const [error, setError] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -17,7 +18,7 @@ const LoginForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (formData.username === '' || formData.password === '') {
@@ -25,8 +26,23 @@ const LoginForm = () => {
       return;
     }
 
-    setError('');
-    console.log('Data sent:', formData);
+    setError(''); 
+    
+    const response = await fetch("http://localhost:3001/users?username=" + formData.username, {
+      method: "GET", 
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData) 
+    });
+    
+    if (response.ok) {
+      alert("The login has been successfully")
+      navigate("/"); 
+    } else {
+      setError('Login failed. Please check your credentials.');
+    }
+   
   };
 
   return (

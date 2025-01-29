@@ -12,7 +12,7 @@ const UserPage = () => {
 
   const handleClick = () => {
     navigate('/admin');
-    };
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,27 +23,27 @@ const UserPage = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-      const response = await fetch("http://localhost:3001/cars", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
+    const response = await fetch("http://localhost:3001/cars", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert("Car added successfully!");
+      setFormData({
+        brand: "",
+        model: "",
+        plate: ""
       });
 
-      if (response.ok) {
-        alert("Car added successfully!");
-        setFormData({
-          brand: "",
-          model: "",
-          plate: ""
-        });
-        
-      } else {
-        alert("Failed to add car. Please try again.");
-      }
+    } else {
+      alert("Failed to add car. Please try again.");
+    }
   };
 
   return (
@@ -55,6 +55,7 @@ const UserPage = () => {
           Brand*
         </label>
         <input
+          type="text"
           id="brand"
           name="brand"
           value={formData.brand}
@@ -68,6 +69,7 @@ const UserPage = () => {
           Car model*
         </label>
         <input
+          type="text"
           id="model"
           name="model"
           value={formData.model}
@@ -81,6 +83,7 @@ const UserPage = () => {
           Plate*
         </label>
         <input
+          type="text"
           id="plate"
           name="plate"
           value={formData.plate}
