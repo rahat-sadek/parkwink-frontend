@@ -25,7 +25,7 @@ const AdminPage = () => {
                 <h2>User Information</h2>
                 {users.map((user) => (
                     <p key={user.id} className="user-info">
-                        <span>{user.nome} {user.cognome}</span>
+                        <span>{user.username} {user.suranme}</span>
                         <span>{user.email}</span>
                     </p>
                 ))}

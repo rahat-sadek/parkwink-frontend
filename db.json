@@ -41,6 +41,18 @@
       "brand": "sfdsdfds",
       "model": "sfdfdsfds",
       "plate": "fsdfsd"
+    },
+    {
+      "id": "ea41",
+      "brand": "sfdsdfds",
+      "model": "sfdfdsfds",
+      "plate": "fsdfsd"
+    },
+    {
+      "id": "aacb",
+      "brand": "sfdsdfds",
+      "model": "sfdfdsfds",
+      "plate": "fsdfsd"
     }
   ],
   "places": [
@@ -137,45 +149,6 @@
       "email": "dmwomdwommd@adsknake",
       "password": "12345",
       "confirmPassword": "12345"
-    },
-    {
-      "id": "50d4",
-      "username": "marco",
-      "password": "password123"
-    },
-    {
-      "id": "1bc4",
-      "username": "sfew",
-      "password": "fewfew"
-    },
-    {
-      "id": "5add",
-      "username": "rahat",
-      "email": "rahatsadek5@gmai.com",
-      "password": "ciao123",
-      "confirmPassword": "ciao123"
-    },
-    {
-      "id": "811d",
-      "username": "rahat",
-      "password": "ciao123"
-    },
-    {
-      "id": "7a54",
-      "username": "ewrew",
-      "password": "ewwrew"
-    },
-    {
-      "id": "0090",
-      "username": "jgjkhg",
-      "email": "fdsfdfs@com",
-      "password": "12345",
-      "confirmPassword": "12345"
-    },
-    {
-      "id": "5b02",
-      "username": "rahat",
-      "password": "ciao123"
     }
   ]
 }

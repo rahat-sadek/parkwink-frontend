@@ -33,9 +33,9 @@ const LoginForm = () => {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(formData) 
     });
-    
+    console.log(response)
+    console.log(response.data)
     if (response.ok) {
       alert("The login has been successfully")
       navigate("/"); 
