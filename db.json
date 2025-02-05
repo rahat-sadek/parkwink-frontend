@@ -53,6 +53,12 @@
       "brand": "sfdsdfds",
       "model": "sfdfdsfds",
       "plate": "fsdfsd"
+    },
+    {
+      "id": "fc5f",
+      "brand": "dfdsf",
+      "model": "sdfsdfds",
+      "plate": "sffsdf"
     }
   ],
   "places": [
@@ -149,6 +155,13 @@
       "email": "dmwomdwommd@adsknake",
       "password": "12345",
       "confirmPassword": "12345"
+    },
+    {
+      "id": "b798",
+      "username": "manoo",
+      "email": "manoin@gmail.com",
+      "password": "manoo123",
+      "confirmPassword": "manoo123"
     }
   ]
 }

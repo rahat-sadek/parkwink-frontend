@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import "../styles/UserPage.css";
+import "../styles/AddCars.css";
 
-const UserPage = () => {
+const AddCars = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     brand: "",
@@ -11,7 +11,7 @@ const UserPage = () => {
   });
 
   const handleClick = () => {
-    navigate('/admin');
+    navigate('/carlist');
   };
 
   const handleInputChange = (e) => {
@@ -101,4 +101,4 @@ const UserPage = () => {
   );
 };
 
-export default UserPage;
+export default AddCars;

@@ -12,8 +12,8 @@ const Header = () => (
     
     <nav aria-label="Main Navigation">
       <ul className="nav-links">
-        <li><Link to="/user" aria-label="Go to User Dashboard">User</Link></li>
-        <li><Link to="/admin" aria-label="Go to Admin Dashboard">Admin</Link></li>
+        <li><Link to="/addcars" aria-label="Go to User Dashboard">Add cars</Link></li>
+        <li><Link to="/carlist" aria-label="Go to Admin Dashboard">Car list</Link></li>
       </ul>
     </nav>
   </header>

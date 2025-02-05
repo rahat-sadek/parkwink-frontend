@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import '../styles/AdminPage.css';
+import '../styles/CarList.css';
 
-const AdminPage = () => {
+const CarList = () => {
     const [cars, setCars] = useState([]);
     const [users, setUsers] = useState([]);
 
@@ -44,4 +44,4 @@ const AdminPage = () => {
     );
 };
 
-export default AdminPage;
+export default CarList;

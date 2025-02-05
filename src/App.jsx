@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import UserPage from './pages/UserPage';
-import AdminPage from './pages/AdminPage';
+import CarList from './pages/CarList';
 import Layout from './components/Layout'
 import HomePage from './pages/HomePage'
 import RegisterForm from './pages/RegisterForm';
 import LoginForm from './pages/LoginForm';
+import AddCars from './pages/AddCars';
 
 
 function App() {
@@ -15,22 +15,25 @@ function App() {
       <Route path="/login" element={
             <LoginForm />
         } />
-      <Route path="/register" element={
+      <Route path="/"  element={
             <RegisterForm />
         } />
-        <Route path="/" element={
+        <Route path="/register"  element={
+            <RegisterForm />
+        } />
+        <Route path="/home" element={
           <Layout>
             <HomePage />
           </Layout>
         } />
-        <Route path="/user" element={
+        <Route path="/addcars" element={
           <Layout>
-            <UserPage />
+            <AddCars />
           </Layout>
         } />
-        <Route path="/admin" element={
+        <Route path="/carlist" element={
           <Layout>
-            <AdminPage />
+            <CarList />
           </Layout>
         } />
       </Routes>
