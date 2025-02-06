@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../styles/RegisterForm.css';
 
@@ -59,7 +60,10 @@ const RegisterForm = () => {
 
   return (
     <div className="register-form">
-      <h2>Registrazione</h2>
+      <h2>Register/
+      <Link to={'/login'}>Login</Link>
+      </h2>
+
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">Username*</label>

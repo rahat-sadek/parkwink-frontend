@@ -59,6 +59,12 @@
       "brand": "dfdsf",
       "model": "sdfsdfds",
       "plate": "sffsdf"
+    },
+    {
+      "id": "015d",
+      "brand": "dfdsf",
+      "model": "sdfsdfds",
+      "plate": "sffsdf"
     }
   ],
   "places": [
@@ -162,6 +168,20 @@
       "email": "manoin@gmail.com",
       "password": "manoo123",
       "confirmPassword": "manoo123"
+    },
+    {
+      "id": "e3cb",
+      "username": "rahat",
+      "email": "rahatsadek5@gmail",
+      "password": "ciao123",
+      "confirmPassword": "ciao123"
+    },
+    {
+      "id": "51f7",
+      "username": "ziomimi",
+      "email": "ziomimi65@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ]
 }

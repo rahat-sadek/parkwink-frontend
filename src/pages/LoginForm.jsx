@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/LoginForm.css';
 
 const LoginForm = () => {
@@ -38,7 +39,7 @@ const LoginForm = () => {
     console.log(response.data)
     if (response.ok) {
       alert("The login has been successfully")
-      navigate("/"); 
+      navigate("/home"); 
     } else {
       setError('Login failed. Please check your credentials.');
     }
@@ -47,7 +48,9 @@ const LoginForm = () => {
 
   return (
     <div className="login-form">
-      <h2>Login</h2>
+      <h2>Login/
+      <Link to={'/register'}>Register</Link>
+      </h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">Username*</label>
