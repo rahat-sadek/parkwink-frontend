@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../parkwink-frontend"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

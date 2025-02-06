@@ -71,4 +71,4 @@ app.delete('/cars/:id', (req, res) => {
     });
 });
 
-app.listen(3002, () => console.log('Server avviato sulla porta 3000'));
+app.listen(3002, () => console.log('Server avviato sulla porta 3002'));
